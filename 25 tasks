@@ -1,0 +1,371 @@
+CONDITION, LOOPS
+
+//7. Write a program using switch that displays the time of the year by its number. For example, if the season number is 2, the program should output "Spring". 
+import java.util.Scanner;
+public class task {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number (1-4): ");
+        int num = scanner.nextInt();
+
+        System.out.print("The season is: ");
+        switch (num) {
+            case 1:
+                System.out.println("Winter");
+                break;
+            case 2:
+                System.out.println("Spring");
+                break;
+            case 3:
+                System.out.println("Summer");
+                break;
+            case 4:
+                System.out.println("Autumn");
+                break;
+            default:
+                System.out.println("Error");
+                break;
+        }
+    }
+}
+
+//20. Write a program using for loop that displays all the numbers from 1 to 50, which are divisible by 5 without remainder.
+public class task{
+    public static void main(String[] args){
+        for(int i = 1; i <= 50; i++){
+            if(i%5==0){
+                System.out.println(i);
+            }
+        }
+    }
+}
+
+//33. Write a program that calculates the remainder of dividing one given number by another (for example, the remainder of dividing 17 by 4) and displays the result on the screen.
+import java.util.Scanner;
+public class task{
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the 1st number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter the 2nd number: ");
+        int num2 = scanner.nextInt();
+
+        int result = num1 % num2;
+        System.out.println("The remainder of dividing " + num1 + " by " + num2 + " is: " + result);
+    }
+}
+
+//46. Write a program that checks whether the number entered by the user falls into the range from 10 to 20.
+import java.util.Scanner;
+public class task{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int num = scan.nextInt();
+        if(num<=20 && num>=10)
+            System.out.println("The number falls into the range from 10 to 20.");
+        else
+            System.out.println("The number does not fall into the range from 10 to 20.");
+    }
+}
+
+//59. Create a code that takes the age from the user in years and returns the age in days. For example, (1) ➞ 365. Try without Scanner method.
+import java.util.Scanner;
+public class task{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter your age: ");
+        int age = scan.nextInt();
+        int day = age * 365;
+        System.out.print("The days: " + day);
+    }
+}
+
+//72. Given two numbers, print 'less' if the sum of both numbers is less than 100. Otherwise return 'more'. For example, (15, 45) ➞ ‘Less’
+import java.util.Scanner;
+public class task{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter 1st num: ");
+        int num1 = scan.nextInt();
+        System.out.print("Enter 2nd num: ");
+        int num2 = scan.nextInt();
+        int sum = num1 + num2;
+        if(sum >= 100)
+            System.out.println("More");
+        else
+            System.out.println("Less");
+    }
+}
+
+//85. Ask user to enter radius, program should execute area of circle. For example, (5) ➞ 78.5 area of circle = pi*r^2, pi=3.14
+import java.util.Scanner;
+public class task{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter 1st num: ");
+        int rad = scan.nextInt();
+        double area = 3.14*rad*rad;
+        System.out.println("The area: " + area);
+    }
+}
+
+//98. Write a program to print even numbers from 1 to 10 using while a loop.
+public class task{
+    public static void main(String[] args){
+        int i = 1;
+        while(i<=10){
+            if(i%2==0)
+                System.out.println(i);
+            i++;
+        }
+    }
+}
+
+//11. Write a program using the for loop that displays all the numbers from 1 to 100.
+public class task{
+    public static void main(String[] args){
+        int i = 1;
+        while(i<=100){
+            System.out.println(i);
+            i++;
+        }
+    }
+}  
+
+//24. For loop. Print out Hello World 3 times
+public class task{
+    public static void main(String[] args){
+        for(int i = 1; i <= 3; i++)
+            System.out.println("Hello World!");
+    }
+}
+
+ARRAYS
+
+//7. Find the average of numbers in a given list
+public class task{
+    public static void main(String[] args) {
+        int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int avg = 0;
+        int sum = 0;
+        for (int i = 0; i <= array.length; i++)
+            sum += i;
+        avg = sum / array.length;
+        System.out.println("Average: " + avg);
+    }
+}
+
+//20. Generate Fibonacci Series: Create a loop to generate the Fibonacci series up to a specified number of terms.
+public class task {
+    public static void main(String[] args) {
+        int num = 10;
+
+        int first = 0;
+        int second = 1;
+
+        System.out.println("Fibonacci series up to " + num + " terms:");
+        for (int i = 0; i < num; i++) {
+            System.out.print(first + " ");
+
+            int next = first + second;
+            first = second;
+            second = next;
+        }
+    }
+}
+
+//33. Create an array of numbers. Write a program that displays length of the array.
+public class task {
+    public static void main(String[] args) {
+        int array[] = {1,2,3,4,5,6,7,8,9,10};
+        System.out.println("The length: " + array.length);
+    }
+}
+
+//46. Write a program that outputs 10 lines, numbered 1 to 10, each with your name on it.
+public class task {
+    public static void main(String[] args) {
+        int i = 1;
+        while(i<= 10) {
+            System.out.println(i + " Aruzhan");
+            i++;
+        }
+    }
+}
+
+//59. The sum of the array elements: Write a program that calculates the sum of all the elements in an array of integers.
+public class task {
+    public static void main(String[] args) {
+        int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int sum = 0;
+        for (int i = 0; i <= array.length; i++) {
+            sum += i;
+        }
+        System.out.println("The sum: " + sum);
+    }
+}
+
+//72. Write a program that displays all the numbers from 1 to 100, which are divisible by both 5 and 10 without remainder using the while loop.
+public class task {
+    public static void main(String[] args) {
+        int i = 1;
+        while(i<=100){
+            if(i%5==0 && i%10==0){
+                System.out.println(i);
+            }
+            i++;
+        }
+    }
+}
+
+//85.  Келесі екіөлшемді массивті құр:
+//     1 2 3 4
+//     5 6 7
+public class task {
+    public static void main(String[] args) {
+        int array[][] = {{1,2,3,4},{5,6,7}};
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println(); 
+        }
+    }
+}
+
+//98. Find the sum of all numbers from 1 to 100: Use a loop to find the sum of all numbers from 1 to 100
+public class task {
+    public static void main(String[] args) {
+        int sum = 0;
+        int i = 1;
+        while(i<=100){
+            sum += i;
+            i++;
+        }
+        System.out.println(sum);
+    }
+}
+
+//11. Calculate the average of all elements in the array.
+public class task {
+    public static void main(String[] args) {
+        int array[] = {1,2,3,4,5,6,7,8,9,10};
+        int sum = 0;
+        for(int i = 0; i <= array.length; i++){
+            sum += i;
+        }
+        System.out.println(sum);
+    }
+}
+
+//24. Create an array of numbers. Write a program that count and print how many of them are even and how many are odd.
+public class task {
+    public static void main(String[] args) {
+        int[] array = {10, 5, 13, 8, 14, 40, 36, 17};
+        int even = 0;
+        int odd = 0;
+        for (int i : array) {
+            if (i % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+        }
+        System.out.println("Number of even numbers: " + even);
+        System.out.println("Number of odd numbers: " + odd);
+    }
+}
+
+CLASS AND OBJECTS
+
+//7. Write a class "Book" with attributes: title, author, year of publication, and number of pages. 
+public class Book {
+    private String title;
+    private String author;
+    private int year;
+    private int numberOfPages;
+
+    public static void main(String[] args) {
+        Book book = new Book();
+        book.author = "Agatha Christie";
+        book.year = 1934;
+        book.numberOfPages = 320;
+        book.title = "Murder on the Orient Express";
+        System.out.println("Author: " + book.author);
+        System.out.println("Year: " + book.year);
+        System.out.println("Num of pages: " + book.numberOfPages);
+        System.out.println("Title: " + book.title);
+    }
+}
+
+//20. Create a class 'Computer' that contains properties 'brand' and 'price'. Then create an object of type 'Computer' and display information about the computer.
+public class Computer {
+    private String brand;
+    private double price;
+
+    public static void main(String[] args) {
+        Computer book = new Computer();
+        book.brand = "Macbook";
+        book.price = 999.99d;
+        System.out.println("Brand: " + book.brand);
+        System.out.println("Price: " + book.price);
+    }
+}
+
+//33. Craft a Java class named Recipe. Recipes are defined by their name (String) and ingredients (String). Invent a recipe titled "Pasta Carbonara" with ingredients  "spaghetti, eggs, bacon, Parmesan." Display the recipe's name and ingredients
+public class recipe {
+    private String name;
+    private String ingredients;
+
+    public static void main(String[] args) {
+        recipe pastaCarbonara = new recipe();
+        pastaCarbonara.ingredients = "spaghetti, eggs, bacon, Parmesan";
+        pastaCarbonara.name = "pasta Carbonara";
+        System.out.println("Recipe: " + pastaCarbonara.ingredients);
+        System.out.println("Ingredients: " + pastaCarbonara.name);
+    }
+}
+
+//46. Create a class "Circle" with attribute "radius". Implement methods to calculate the area and length of the circle's circumference. Create several objects of this class and print their areas and circle lengths.
+public class circle {
+    public double method(int radius) {
+        return 3.14 * radius * radius;
+    }
+
+    public static void main(String[] args) {
+        int radius = 5;
+        circle circle = new circle();
+        double area = circle.method(radius);
+        System.out.println("Area " + area);
+    }
+}
+
+//59. Write a "Triangle" class with the fields "side1", "side2", "side3" and "perimeter". Write a method for calculating the perimeter of a triangle. Create several objects of this class and display their perimeters.
+public class Triangle {
+    private int side1;
+    private int side2;
+    private int side3;
+    private int perimeter;
+
+    public int method() {
+        perimeter = side1 + side2 + side3;
+        return perimeter;
+    }
+
+    public static void main(String[] args) {
+        Triangle triangle1 = new Triangle();
+        triangle1.side1 = 3;
+        triangle1.side2 = 4;
+        triangle1.side3 = 5;
+        Triangle triangle2 = new Triangle();
+        triangle2.side1 = 8;
+        triangle2.side2 = 15;
+        triangle2.side3 = 17;
+
+        System.out.println("Perimeter of Triangle 1: " + triangle1.method());
+        System.out.println("Perimeter of Triangle 2: " + triangle2.method());
+    }
+}
